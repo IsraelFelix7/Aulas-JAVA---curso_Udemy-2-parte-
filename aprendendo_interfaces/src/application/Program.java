@@ -6,6 +6,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 import model.entities.Contract;
+import model.service.ContractService;
 
 public class Program {
 
@@ -26,6 +27,12 @@ public class Program {
 		Contract contract = new Contract(numero, date, totalValue);
 		
 		System.out.println("Entre com o numero de parcelas: ");
+		int n = sc.nextInt();
+		
+		ContractService contractService = new ContractService(null);
+		contractService.processContract(contract, n);
+		
+		System.out.println("Parcelas: ");
 		
 		
 		sc.close();

@@ -2,7 +2,7 @@ package model.service;
 
 import model.entities.Contract;
 
-public class ContractService {
+public class ContractService  {
 	
 	private OnlinePaymentService onlinePaymentService;
 
@@ -11,6 +11,10 @@ public class ContractService {
 	}
 	
 	public void processContract(Contract contract, int morths) {
+		
+		for(int i = 1; i <= morths ; i++) {
+				
+		}
 		
 		
 	}
