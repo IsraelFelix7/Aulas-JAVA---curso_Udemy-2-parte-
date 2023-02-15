@@ -4,7 +4,7 @@ public interface Funcionario {
 		
 	
 	
-	public default double calcularSalario(double horasTrabalhadas, int quantHoras) {
+	 default double calcularSalario(double horasTrabalhadas, int quantHoras) {
 		return horasTrabalhadas * quantHoras;
 	}
 
