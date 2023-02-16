@@ -1,5 +1,7 @@
 package entities;
 
+import java.util.Objects;
+
 public class Gerente implements Funcionario {
 	private double salarioBase = 2000;
 	private double bonus = 500;
@@ -45,6 +47,27 @@ public class Gerente implements Funcionario {
 
 	public double getSalarioMensal() {
 		return salarioMensal;
+	}
+
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(bonus, salarioBase, salarioMensal);
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Gerente other = (Gerente) obj;
+		return Double.doubleToLongBits(bonus) == Double.doubleToLongBits(other.bonus)
+				&& Double.doubleToLongBits(salarioBase) == Double.doubleToLongBits(other.salarioBase)
+				&& Double.doubleToLongBits(salarioMensal) == Double.doubleToLongBits(other.salarioMensal);
 	}
 
 
