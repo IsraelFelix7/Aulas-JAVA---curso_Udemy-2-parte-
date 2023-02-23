@@ -17,7 +17,7 @@ public class Program {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("Enter file full path: ");
+		System.out.print("Enter file full path: ");
 		String path = sc.nextLine();
 		
 		try (BufferedReader br = new BufferedReader(new FileReader(path))){
