@@ -31,6 +31,7 @@ public class Program {
 				if (votes.containsKey(name)) {
 					int votesSoFar = votes.get(name);
 					votes.put(name, count + votesSoFar);
+	
 				}
 				else {
 					votes.put(name, count);
